@@ -5,6 +5,7 @@ To operate this application properly, follow these steps:<br>
 3.Run command ,php artisan queue:work.This will allow queue to start working.<br>
 4.Run command ,php artisan schedule:work.This will allow scheduled work to operate properly.<br>
 Note:The commands should be entered in given order.<br>
+To testing purpose use OPEN_APP_ID=9a701c3d88278d0ec38ef512f15f24be
 
 
 
