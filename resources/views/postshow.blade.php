@@ -21,9 +21,13 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <table class="table table-bordered">
-        <form action="/api/weathershow" method='get'>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-xl-9 mx-auto">
+                <div class="card" style="width: 18rem;">
+                   
+                <div class="card-body">
+                        <form action="/api/weathershow" method='get'>
                         <label for="">Date</label>
                         <input type="date" name="date" id="">
                         <button type="submit">Go</button>
@@ -52,8 +56,14 @@
                                 @endforeach
                             </tbody>
                         </table>
-
-            
+                       
+                       
+                        
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

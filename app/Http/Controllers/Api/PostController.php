@@ -1,10 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Jobs\ApiJob;
+use Illuminate\Support\Facades\Log;
+use Carbon\Carbon;
+
+
 
 
 class PostController extends Controller
@@ -14,9 +19,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $posts=Post::orderBy('id', 'desc');
+        
+        return view('postindex', [
+            'posts'=>$posts->paginate(10)
+        ]);
     }
 
     /**
@@ -24,9 +33,9 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -46,9 +55,18 @@ class PostController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function show()
-    {
-        //
+    public function show(Request $request)
+    {    $posts=Post::WhereDate('date',$request->date)->get();
+        if($posts->count()>1){
+            $posts=Post::WhereDate('date','=',$request->date)->get();
+        }
+        else{
+            $posts=Post::orderby('id','DESC');
+        }
+        
+        return view('postshow',[
+            'posts'=>$posts
+        ]);
     }
 
     /**
@@ -85,23 +103,6 @@ class PostController extends Controller
         //
     }
 
-    public function calllist(){
-        $js=HTTP::get('https://api.openweathermap.org/data/2.5/weather?&q=Kathmandu&appid='.(env('OPEN_APP_ID')))->json();
-        
-    $location=[
-        'london','tokyo','paris','berlin','newyork'
-    ];
-    $retive_data=array();
-    for($i=0;$i<sizeof($location);$i++){
-        $js=HTTP::get('https://api.openweathermap.org/data/2.5/weather?&q='.$location[$i].'&appid='.(env('OPEN_APP_ID')))->json();
-        array_push($retive_data,array($js['weather'][0]['main'],$js['name']));
-    }
-     return serialize($retive_data);
-    }
-
-    public function testfunc(){
-        $js=HTTP::get('https://api.openweathermap.org/data/2.5/weather?&q=Kathmandu&appid='.(env('OPEN_APP_ID')))->json();
-        // return $js['weather'][0]['main'];
-        return $js['name'];
-    }
+    
+    
 }

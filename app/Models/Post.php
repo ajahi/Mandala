@@ -9,6 +9,6 @@ class Post extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'newyork', 'tokyo','berlin','paris','london'
+        'newyork', 'tokyo','berlin','paris','london','date'
     ];
 }

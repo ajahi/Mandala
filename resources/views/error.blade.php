@@ -21,39 +21,19 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-        <table class="table table-bordered">
-        <form action="/api/weathershow" method='get'>
-                        <label for="">Date</label>
-                        <input type="date" name="date" id="">
-                        <button type="submit">Go</button>
-                        </form>
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                <th scope="col">Newyork</th>
-                                <th scope="col">Paris</th>
-                                <th scope="col">London</th>
-                                <th scope="col">Berlin</th>
-                                <th scope="col">Tokyo</th>
-                                <th scope="col">Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($posts as $post)
-                                <tr>
-                                <th scope="row">{{$post->newyork}}</th>
-                                <td>{{$post->paris}}</td>
-                                <td>{{$post->london}}</td>
-                                <td>{{$post->berlin}}</td>
-                                <td>{{$post->tokyo}}</td>
-                                <td>{{$post->date}}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-
-            
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-xl-9 mx-auto">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-body">
+                        
+                        
+                        <H1>ERROR</H1>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
