@@ -76,10 +76,7 @@ class PostController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function edit(rc $rc)
-    {
-        //
-    }
+    
 
     /**
      * Update the specified resource in storage.
@@ -88,10 +85,7 @@ class PostController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, rc $rc)
-    {
-        //
-    }
+    
 
     /**
      * Remove the specified resource from storage.
@@ -99,10 +93,7 @@ class PostController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(rc $rc)
-    {
-        //
-    }
+    
 
     
     

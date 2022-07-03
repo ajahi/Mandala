@@ -37,19 +37,22 @@
                                 <th scope="col">Berlin</th>
                                 <th scope="col">Tokyo</th>
                                 <th scope="col">Date</th>
+                                
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($posts as $post)
                                 <tr>
-                                <th scope="row">{{$post->newyork}}</th>
+                                <th>{{$post->newyork}}</th>
                                 <td>{{$post->paris}}</td>
                                 <td>{{$post->london}}</td>
                                 <td>{{$post->berlin}}</td>
                                 <td>{{$post->tokyo}}</td>
                                 <td>{{$post->date}}</td>
+                               
                                 </tr>
                                 @endforeach
+                                
                             </tbody>
                         </table>
 
