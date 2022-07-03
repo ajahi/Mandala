@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +18,13 @@ use App\Http\Controllers\Api\PostController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/',function(){
-    return view('welcome');
-});
-Route::apiResource('/weather',[PostController::class]);
+Route::gett('/',function(){
+    return view
+})
+Route::get('/weather',[PostController::class,'index']);
 
 
+
+Route::get('weathershow',[PostController::Class,'show']);
 Route::get('errorpage',[PostController::class,'error']);
 
