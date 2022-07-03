@@ -1,9 +1,9 @@
-To operate this application properly, follow these steps:
-1.Properly clone the git given,
-2.Setup initial artisan command and db connections.
-3.Run command ,php artisan queue:work.This will allow queue to start working.
-4.Run command ,php artisan schedule:work.This will allow scheduled work to operate properly.
-Note:The commands should be entered in given order.
+To operate this application properly, follow these steps:<br>
+1.Properly clone the git, cd into the cloned file.<br>
+2.Setup initial artisan command and db connections.<br>
+3.Run command ,php artisan queue:work.This will allow queue to start working.<br>
+4.Run command ,php artisan schedule:work.This will allow scheduled work to operate properly.<br>
+Note:The commands should be entered in given order.<br>
 
 
 
