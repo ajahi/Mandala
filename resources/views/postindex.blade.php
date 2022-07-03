@@ -23,12 +23,13 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <table class="table table-bordered">
-        <form action="/api/weathershow" method='get'>
+        <form action="/api/weather" method='get'>
                         <label for="">Date</label>
                         <input type="date" name="date" id="">
                         <button type="submit">Go</button>
                         </form>
                         <table class="table table-bordered">
+                       
                             <thead>
                                 <tr>
                                 <th scope="col">Newyork</th>
@@ -41,20 +42,27 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($posts as $post)
-                                <tr>
-                                <th>{{$post->newyork}}</th>
-                                <td>{{$post->paris}}</td>
-                                <td>{{$post->london}}</td>
-                                <td>{{$post->berlin}}</td>
-                                <td>{{$post->tokyo}}</td>
-                                <td>{{$post->date}}</td>
-                               
-                                </tr>
-                                @endforeach
+                                
+                                    @foreach($posts as $post)
+                                    <tr>
+                                    <th>{{$post->newyork}}</th>
+                                    <td>{{$post->paris}}</td>
+                                    <td>{{$post->london}}</td>
+                                    <td>{{$post->berlin}}</td>
+                                    <td>{{$post->tokyo}}</td>
+                                    <td>{{$post->date}}</td>
+                                
+                                    </tr>
+                                    
+                                    @endforeach
+                                
                                 
                             </tbody>
+                            
                         </table>
+                        @empty($posts)
+                        <h2>No Records found</h2>
+                        @endempty
 
             
         </div>

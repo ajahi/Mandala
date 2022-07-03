@@ -23,11 +23,9 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <table class="table table-bordered">
-        <form action="/api/weathershow" method='get'>
-                        
-                        <button type="submit"> <a href="/api/">Return to index page</a> </button>
-                       
+        <button><a href="/">Return to Index</a></button>
                         <table class="table table-bordered">
+                        @isset($posts)
                             <thead>
                                 <tr>
                                 <th scope="col">Newyork</th>
@@ -36,21 +34,31 @@
                                 <th scope="col">Berlin</th>
                                 <th scope="col">Tokyo</th>
                                 <th scope="col">Date</th>
+                                
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($posts as $post)
-                                <tr>
-                                <th scope="row">{{$post->newyork}}</th>
-                                <td>{{$post->paris}}</td>
-                                <td>{{$post->london}}</td>
-                                <td>{{$post->berlin}}</td>
-                                <td>{{$post->tokyo}}</td>
-                                <td>{{$post->date}}</td>
-                                </tr>
-                                @endforeach
+                                
+                                    @foreach($posts as $post)
+                                    <tr>
+                                    <th>{{$post->newyork}}</th>
+                                    <td>{{$post->paris}}</td>
+                                    <td>{{$post->london}}</td>
+                                    <td>{{$post->berlin}}</td>
+                                    <td>{{$post->tokyo}}</td>
+                                    <td>{{$post->date}}</td>
+                                
+                                    </tr>
+                                    
+                                    @endforeach
+                                
+                                
                             </tbody>
+                            @endisset
                         </table>
+                        @empty($posts)
+                                <h2>No records for given data</h2>
+                                @endempty
 
             
         </div>
