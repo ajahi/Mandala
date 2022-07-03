@@ -1,3 +1,13 @@
+To operate this application properly, follow these steps:<br>
+1.Properly clone the git, cd into the cloned file.<br>
+2.Setup initial artisan command and db connections.<br>
+3.Run command ,php artisan queue:work.This will allow queue to start working.<br>
+4.Run command ,php artisan schedule:work.This will allow scheduled work to operate properly.<br>
+Note:The commands should be entered in given order.<br>
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
