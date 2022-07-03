@@ -60,10 +60,7 @@
                             </tbody>
                             
                         </table>
-                        @empty($posts)
-                        <h2>No Records found</h2>
-                        @endempty
-
+                        
             
         </div>
     </body>

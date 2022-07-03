@@ -23,9 +23,11 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
         <table class="table table-bordered">
-        <button><a href="/">Return to Index</a></button>
+        <button><a href="/api/">Return to Index</a></button>
                         <table class="table table-bordered">
-                        @isset($posts)
+                      
+
+                        @if($posts)
                             <thead>
                                 <tr>
                                 <th scope="col">Newyork</th>
@@ -54,11 +56,11 @@
                                 
                                 
                             </tbody>
-                            @endisset
+                            @else
+                            <h2>No Records</h2>
+                            @endif
                         </table>
-                        @empty($posts)
-                                <h2>No records for given data</h2>
-                                @endempty
+                        
 
             
         </div>
